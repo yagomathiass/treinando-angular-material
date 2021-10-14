@@ -1,0 +1,46 @@
+<section class="sideNav">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+    
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  </mat-drawer-container>
+</section>
+
+
+<mat-spinner class="roll"></mat-spinner>
+
+
+<section class="botao">  
+  <mat-form-field appearance="fill">
+    <mat-label>Horizontal position</mat-label>
+    <mat-select [(value)]="horizontalPosition">
+      <mat-option value="start">Start</mat-option>
+      <mat-option value="center">Center</mat-option>
+      <mat-option value="end">End</mat-option>
+      <mat-option value="left">Left</mat-option>
+      <mat-option value="right">Right</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Vertical position</mat-label>
+    <mat-select [(value)]="verticalPosition">
+      <mat-option value="top">Top</mat-option>
+      <mat-option value="bottom">Bottom</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+    Pool party!
+  </button>
+  
+</section>
